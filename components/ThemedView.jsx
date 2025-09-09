@@ -12,7 +12,7 @@ const ThemedView = ({ style, children, ...props }) => {
       locations={[0.4, 0.7]}
       start={{ x: 0, y: 0 }}
       end={{ x: 2, y: 0.5 }}
-      style={style}
+      style={{flex: 1}}
       {...props}
     >
       {children}

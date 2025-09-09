@@ -1,5 +1,5 @@
 import { StyleSheet, useColorScheme } from 'react-native'
-import { Stack } from 'expo-router'
+import { Stack, Tabs } from 'expo-router'
 import { Colors } from '../constants/colors';
 
 const RouteLayout = () => {
@@ -21,6 +21,12 @@ const RouteLayout = () => {
                 },
                 headerTransparent: true, // overlays the body
             }} />
+
+            <Stack.Screen name='(dashboard)' options={{
+                title: "Home", 
+                headerShown: false,
+                }
+            } />
 
         </Stack>
     )
