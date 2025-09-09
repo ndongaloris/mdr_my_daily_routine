@@ -8,8 +8,8 @@ const ThemedView = ({ style, children, ...props }) => {
 
   return (
     <LinearGradient
-      colors={['#1e1e1e', '#00008b']}
-      locations={[0.3, 0.5]}
+      colors={['#353F54', '#34C8E8']}
+      locations={[0.4, 0.7]}
       start={{ x: 0, y: 0 }}
       end={{ x: 2, y: 0.5 }}
       style={style}
