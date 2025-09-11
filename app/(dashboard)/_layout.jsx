@@ -19,6 +19,13 @@ const DashboardLayout = () => {
 
                 )
             }} />
+            <Tabs.Screen name='planner' options={{
+                title: "Planner",
+                tabBarIcon: () => (
+                    <Ionicons name="calendar" size={30} color="white" />
+
+                )
+            }} />
             <Tabs.Screen name='add' options={{ title: "Add",
                 tabBarIcon: () => (
                     <Ionicons name="add-circle-sharp" size={30} color="white" />
@@ -29,11 +36,6 @@ const DashboardLayout = () => {
                 tabBarIcon: () => (
                     <Ionicons name="person" size={30} color="white" />
 
-                )
-             }} />
-            <Tabs.Screen name='settings' options={{ title: "Settings",
-                tabBarIcon: () => (
-                    <Ionicons name="settings" size={30} color="white" />
                 )
              }} />
         </Tabs>

@@ -1,30 +1,16 @@
-import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import ThemedView from '../components/ThemedView';
-import { Calendar } from 'react-native-calendars';
-import CheckBox from 'expo-checkbox';
 import { Link } from 'expo-router';
 
 const Home = () => {
   return (
     <ThemedView>
-      <Calendar
-        style={styles.calendar}
-        theme={{
-          backgroundColor: '#353F54',
-          calendarBackground: '#353F54',
-          textSectionTitleColor: '#34C8E8',
-          selectedDayBackgroundColor: '#fff',
-          selectedDayTextColor: '#fff',
-          todayTextColor: '#34C8E8',
-          dayTextColor: '#fff',
-          arrowColor: '#fff',
-          monthTextColor: "#fff",
-          todayBackgroundColor: "#fff",
-        }}
-      />
       <View style={styles.container}>
+        <Image source={require("../assets/SB My Daily Routine.png")}
+          style={styles.image}
+        />
         <Text style={styles.title}>Welcome to My Daily Routine Planner </Text>
-        <Link style={styles.link} href="/home">Start</Link>
+        <Link style={styles.link} href="/home">Start ➡</Link>
       </View>
     </ThemedView>
   );
@@ -34,17 +20,24 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 20,
-    paddingTop: 60,
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+
   },
   text: {
     color: 'white',
     fontSize: 22,
     marginBottom: 10,
   },
+  image: {
+    width: 450,
+    height: 300,
+    borderRadius: 20,
+  },
   title: {
     color: '#fff',
-    fontSize: 24,
+    fontSize: 25,
     fontWeight: 'bold',
     paddingBottom: 60,
     textAlign: "center",
@@ -63,15 +56,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   link: {
-    marginVertical: 6,
-    marginHorizontal: 80,
     backgroundColor: '#ffffff22',
-    borderRadius: 12,
-    padding: 16,
+    borderRadius: 30,
+    paddingHorizontal: 70,
+    paddingVertical: 10,
     borderWidth: 1,
     borderColor: '#fff',
     color: "#fff",
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: 25,
   }
 
 });

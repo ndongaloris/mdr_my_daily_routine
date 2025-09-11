@@ -18,6 +18,7 @@ const RouteLayout = () => {
                 headerTitleStyle: {
                     color: 'white', // match your text color
                     fontWeight: 'bold',
+                    fontSize: 30,
                 },
                 headerTransparent: true, // overlays the body
             }} />

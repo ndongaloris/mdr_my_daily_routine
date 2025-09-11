@@ -2,6 +2,7 @@
   "expo": {
     "name": "mdr_my_daily_routine",
     "slug": "mdr_my_daily_routine",
+    "scheme": "mdr",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

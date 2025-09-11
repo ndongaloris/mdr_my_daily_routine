@@ -1,95 +1,53 @@
-import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import ThemedView from '../../components/ThemedView';
-import { Calendar } from 'react-native-calendars';
-import CheckBox from 'expo-checkbox';
-import React, { useState } from 'react';
+import { router } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
-const tasks = [
-  { id: '1', title: '☀️ Morning stretch', status: 'Completed' },
-  { id: '2', title: '📧 Check emails', status: 'Pending' },
-  { id: '3', title: '🛒 Buy groceries', status: 'Pending' },
-  { id: '4', title: '📚 Read 10 pages of a book', status: 'Completed' },
-  { id: '5', title: '💻 Work on React Native project', status: 'Pending' },
-  { id: '6', title: '📞 Call Mom', status: 'Completed' },
-  { id: '7', title: '🍽️ Cook dinner', status: 'Pending' },
-  { id: '8', title: '📝 Journal reflections', status: 'Completed' },
-  { id: '9', title: '🧹 Clean the kitchen', status: 'Pending' },
-  { id: '10', title: '🌙 Plan tomorrow’s top 3 tasks', status: 'Completed' },
-];
 
-const filters = ['All', 'Completed', 'Pending'];
 
 const Home = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
 
-  const filteredTasks =
-    activeFilter === 'All'
-      ? tasks
-      : tasks.filter(task => task.status === activeFilter);
-
-      const toggleCheck = (id) => {
-        const updated = tasks.map(task =>
-          task.id === id ? { ...task, checked: !task.checked } : task
-        );
-        setTasks(updated);
-      };
-      
-      const renderItem = ({ item }) => (
-        <View style={styles.item}>
-          <Text style={styles.list}>{item.title}</Text>
-           <CheckBox
-            value={item.checked}
-            onValueChange={() => toggleCheck(item.id)}
-            color={item.checked ? '#00008b' : undefined}
-      />
-        </View>
-      );
   return (
     <ThemedView style={styles.container}>
-      <Text style={styles.title}>Welcome to your dashboard</Text>
-      <Calendar
-        style={styles.calendar}
-        theme={{
-          backgroundColor: '#353F54',
-          calendarBackground: '#353F54',
-          textSectionTitleColor: '#34C8E8',
-          selectedDayBackgroundColor: '#fff',
-          selectedDayTextColor: '#fff',
-          todayTextColor: '#34C8E8',
-          dayTextColor: '#fff',
-          arrowColor: '#fff',
-          monthTextColor: "#fff",
-          todayBackgroundColor: "#fff",
-        }}
-      />
-
-      <View style={styles.filterBar}>
-        {filters.map(filter => (
-          <TouchableOpacity
-            key={filter}
-            style={[
-              styles.button,
-              activeFilter === filter && styles.activeButton,
-            ]}
-            onPress={() => setActiveFilter(filter)}
-          >
-            <Text
-              style={[
-                styles.buttonText,
-                activeFilter === filter && styles.activeText,
-              ]}
-            >
-              {filter}
-            </Text>
-          </TouchableOpacity>
-        ))}
+      <View style={styles.placer}>
+        <Ionicons style={{ textAlign: "center" }} name="sunny" size={100} color="#fff" />
+        <Text style={styles.title}>Good Morning!</Text>
+        <Text style={{textAlign: "center", color: "#fff"}}>Ready to start your day?</Text>
       </View>
-        
-      <FlatList
-        data={filteredTasks}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-      />
+      <View style={styles.quote}>
+        <Text style={styles.title}>
+          "The secret of getting ahead is getting started."
+        </Text>
+        <Text style={styles.title}>
+          - Mark Twain
+        </Text>
+      </View>
+
+      <View style={styles.report}>
+        <View style={styles.reportCard}>
+          <Ionicons style= {{textAlign: "center",}}name="calendar" size={40} color="#fff" />
+          <Text style={styles.title}>Today's Task</Text>
+          <Text style={styles.title}>5</Text>
+        </View>
+        <View style={styles.reportCard}>
+          <Ionicons style= {{textAlign: "center",}}name="radio-button-on" size={40} color="#fff" />
+          <Text style={styles.title}>Streak</Text>
+          <Text style={styles.title}>12 Days</Text>
+        </View>
+      </View>
+      <TouchableOpacity style={styles.actionButton1} onPress={() => router.push("/planner")}>
+        <Text style={styles.actionButtonText}>Start Your Day</Text>
+      </TouchableOpacity>
+
+      <View style={styles.action}>
+        <TouchableOpacity style={styles.actionButton2} onPress={() => router.push('/add')}>
+          <Text style={styles.actionButtonText}>Add Routine</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.actionButton2} onPress={() => router.push("/profile")}>
+          <Text style={styles.actionButtonText}> View Profile</Text>
+        </TouchableOpacity>
+      </View>
     </ThemedView>
   );
 };
@@ -97,65 +55,74 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    title: {
-      paddingTop: 50, // adjust based on header height
-      paddingLeft:40,
-      fontSize: 24,
-      fontWeight: 'bold',
-      color: 'white',
-    },
-  text: {
+  container: {
+    flex: 1,
+  },
+  placer: {
+    marginTop: 80,
+  },
+  title: {
+    fontSize: 18,
+    textAlign: "center",
+    fontWeight: 'bold',
     color: 'white',
-    fontSize: 22,
-    marginBottom: 10,
-  },
-  calendar: {
-    marginBottom: 20,
-    marginTop: 0,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    padding: 10,
-    marginHorizontal:20,
-  },
-  filterBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
     marginVertical: 10,
   },
-  button: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 20,
-    backgroundColor: '#eee',
-  },
-  activeButton: {
-    backgroundColor: '#4E4AF2',
-  },
-  buttonText: {
-    color: '#333',
-    fontWeight: 'bold',
-  },
-  activeText: {
-    color: '#fff',
-  },
-  item: {
-    flexDirection: 'row',
+  actionButton1: {
     alignItems: 'center',
-    marginVertical: 6,
     marginHorizontal: 16,
-    backgroundColor: '#ffffff22',
     borderRadius: 12,
-    padding: 16,
+    padding: 10,
     borderWidth: 1,
     borderColor: '#fff',
     justifyContent: "space-between",
+    backgroundColor: '#4E4AF2',
+    marginVertical: 10,
   },
-  list: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'center',
+  actionButton2: {
+    alignItems: 'center',
+    marginHorizontal: 16,
+    borderRadius: 12,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#fff',
+    justifyContent: "space-between",
+    width: 160,
   },
+  actionButtonText: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white'
+  },
+  action: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 20,
+    justifyContent: "space-between",
+  },
+  report: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 15,
+    justifyContent: "space-around",
+    margin: 5,
+  },
+  reportCard: {
+    // borderWidth: 1,
+    borderColor: '#ffffff70',
+    borderRadius: 12,
+    width: 160,
+    padding: 15,
+    
+  },
+  quote:{
+    borderRadius: 12,
+    padding: 15,
+    borderWidth: 1,
+    borderColor: '#ffffff70',
+    marginHorizontal: 15 ,
+    marginVertical: 25,
+  }
+
 });

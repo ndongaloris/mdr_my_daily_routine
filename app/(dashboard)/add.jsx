@@ -114,16 +114,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
+    marginVertical: 10,
   },
   input: {
     color: 'white',
-    fontSize: 22,
-    marginBottom: 10,
-    height: 60,
+    fontSize: 17,
+    height: 50,
     padding: 5,
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 6,
     marginHorizontal: 16,
     backgroundColor: '#ffffff22',
     borderRadius: 12,
@@ -144,7 +143,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderWidth: 1,
     borderColor: '#fff',
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   filterBar: {
     flexDirection: 'row',
@@ -153,18 +152,17 @@ const styles = StyleSheet.create({
   },
   addButton: {
     alignItems: 'center',
-    marginVertical: 6,
     marginHorizontal: 16,
-    backgroundColor: '#ffffff22',
+    backgroundColor: '#4E4AF2',
     borderRadius: 12,
-    padding: 16,
+    padding: 10,
     borderWidth: 1,
     borderColor: '#fff',
     justifyContent: "space-between"
   },
   addButtonText: {
     textAlign: "center",
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'white'
   },
@@ -184,13 +182,11 @@ const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 6,
+    marginVertical: 3,
     marginHorizontal: 16,
-    backgroundColor: '#ffffff22',
-    borderRadius: 12,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: '#fff',
+    padding: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff',
     justifyContent: "space-between",
   },
   list: {
