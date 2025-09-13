@@ -41,11 +41,11 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
    cd mdr_my_daily_routine
 Install dependencies:
 
-bash
+   ```bash
 npm install
 Start the app:
 
-bash
+   ```bash
 npx expo start
 
 
