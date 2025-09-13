@@ -15,26 +15,26 @@ const DashboardLayout = () => {
             <Tabs.Screen name='home' options={{
                 title: "Home",
                 tabBarIcon: () => (
-                    <Ionicons name="home" size={30} color="white" />
+                    <Ionicons name="home-outline" size={30} color="white" />
 
                 )
             }} />
-            <Tabs.Screen name='planner' options={{
+            <Tabs.Screen name="planner" options={{
                 title: "Planner",
                 tabBarIcon: () => (
-                    <Ionicons name="calendar" size={30} color="white" />
+                    <Ionicons name="calendar-outline" size={30} color="white" />
 
                 )
             }} />
             <Tabs.Screen name='add' options={{ title: "Add",
                 tabBarIcon: () => (
-                    <Ionicons name="add-circle-sharp" size={30} color="white" />
+                    <Ionicons name="add-circle-outline" size={30} color="white" />
 
                 )
              }} />
             <Tabs.Screen name='profile' options={{ title: "Profile",
                 tabBarIcon: () => (
-                    <Ionicons name="person" size={30} color="white" />
+                    <Ionicons name="person-outline" size={30} color="white" />
 
                 )
              }} />

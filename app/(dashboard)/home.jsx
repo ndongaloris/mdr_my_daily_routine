@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#fff',
     justifyContent: "space-between",
-    backgroundColor: '#4E4AF2',
+    backgroundColor: '#34C8E8',
     marginVertical: 10,
   },
   actionButton2: {

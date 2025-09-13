@@ -50,8 +50,8 @@ const Planner = () => {
       <Calendar
         style={styles.calendar}
         theme={{
-          backgroundColor: '#353F54',
-          calendarBackground: '#353F54',
+          backgroundColor: '#353f5404',
+          calendarBackground: '#353f5404',
           textSectionTitleColor: '#34C8E8',
           selectedDayBackgroundColor: '#fff',
           selectedDayTextColor: '#fff',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
   },
   activeButton: {
-    backgroundColor: '#4E4AF2',
+    backgroundColor: '#34C8E8',
   },
   buttonText: {
     color: '#333',

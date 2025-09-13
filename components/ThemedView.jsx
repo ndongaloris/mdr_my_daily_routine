@@ -9,7 +9,7 @@ const ThemedView = ({ style, children, ...props }) => {
   return (
     <LinearGradient
       colors={['#353F54', '#34C8E8']}
-      locations={[0.4, 0.7]}
+      locations={[0.1, 0.9]}
       start={{ x: 0, y: 0 }}
       end={{ x: 2, y: 0.5 }}
       style={{flex: 1}}
