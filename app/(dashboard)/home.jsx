@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <ThemedView style={styles.container}>
       <View style={styles.placer}>
-        <Ionicons style={{ textAlign: "center" }} name="sunny" size={100} color="#fff" />
-        <Text style={styles.title}>Good Morning!</Text>
+        <Ionicons style={{ textAlign: "center" }} name="moon-sharp" size={80} color="#fff" />
+        <Text style={styles.title}>Good Evening!</Text>
         <Text style={{textAlign: "center", color: "#fff"}}>Ready to start your day?</Text>
       </View>
       <View style={styles.quote}>
