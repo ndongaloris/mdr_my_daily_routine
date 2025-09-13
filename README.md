@@ -21,15 +21,17 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
 - **react-native-calendars** for calendar integration
 - **expo-checkbox** for task completion tracking
 - **react-native-element-dropdown** for time-of-day selection
+
+## 📂 Project Structure
 - app/ ├── index.jsx # Landing screen ├── (dashboard)/_layout.jsx
-- # Tab navigation layout ├── (dashboard)/home.jsx
-- # Home dashboard ├── (dashboard)/planner.jsx
-- # Calendar and task list ├── (dashboard)/add.jsx
-- # Add new routine ├── (dashboard)/profile.jsx
-- # User profile and settings components/ └── ThemedView.jsx
-- # Gradient background wrapper constants/ └── colors.js
-- # Theme color definitions assets/ └── SB My Daily Routine.png
-- # App banner image
+- Tab navigation layout ├── (dashboard)/home.jsx
+- Home dashboard ├── (dashboard)/planner.jsx
+- Calendar and task list ├── (dashboard)/add.jsx
+- Add new routine ├── (dashboard)/profile.jsx
+- User profile and settings components/ └── ThemedView.jsx
+- Gradient background wrapper constants/ └── colors.js
+- Theme color definitions assets/ └── SB My Daily Routine.png
+- App banner image
 - 
 ## 🧪 How to Run
 
@@ -46,5 +48,5 @@ Start the app:
 bash
 npx expo start
 
-## 📂 Project Structure
+
 
