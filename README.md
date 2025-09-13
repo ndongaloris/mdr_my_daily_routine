@@ -32,7 +32,7 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
 - Gradient background wrapper constants/ └── colors.js
 - Theme color definitions assets/ └── SB My Daily Routine.png
 - App banner image
-- 
+
 ## 🧪 How to Run
 
 1. Clone the repository:
