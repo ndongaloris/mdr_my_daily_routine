@@ -39,11 +39,12 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
    ```bash
    git clone https://github.com/your-username/mdr_my_daily_routine.git
    cd mdr_my_daily_routine
-Install dependencies:
-
+   
+2. Install dependencies:
    ```bash
 npm install
-Start the app:
+
+3. Start the app:
 npx expo start
 
 
