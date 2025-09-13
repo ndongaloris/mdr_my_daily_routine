@@ -42,10 +42,11 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
    
 2. Install dependencies:
    ```bash
-npm install
+   npm install
 
 3. Start the app:
-npx expo start
+   ```bash
+   npx expo start
 
 
 
