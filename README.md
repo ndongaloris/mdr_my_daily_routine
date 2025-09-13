@@ -47,6 +47,3 @@ A mobile app built with **React Native** and **Expo Router** to help users plan,
 3. Start the app:
    ```bash
    npx expo start
-
-
-
