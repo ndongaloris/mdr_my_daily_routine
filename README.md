@@ -3,7 +3,7 @@
 A mobile app built with **React Native** and **Expo Router** to help users plan, track, and reflect on their daily routines. This project was developed as part of the CSE 310 Applied Programming course.
 
 ## 📽️ Demo Video
-[Insert your video link here]
+Check out the [demo video](https://youtu.be/zWFz9G9pMrs)
 
 ## 📱 Features
 
